@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Odyssey On Rails</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= render 'layouts/header' %>
+<div class="container">
+	<div class="row-fluid oor-60px-padding-top">
+		<div class="span8">
+			<%= yield %>
+		</div>
+		<div class="span4">
+			<%= render "layouts/ads_sidebar" %>
+			<%= render "layouts/archive_sidebar" %>
+		</div>		
+	</div>
+</div>
+
+</body>
+</html>
