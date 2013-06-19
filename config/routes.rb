@@ -1,5 +1,5 @@
 Odysseyonrails::Application.routes.draw do
-  resources :articles
+  resources :articles, :only => [:index, :show]
 
 
   resources :posts
