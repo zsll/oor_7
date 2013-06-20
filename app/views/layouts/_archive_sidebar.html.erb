@@ -10,6 +10,10 @@
 				</li>
 			<% end %>
 		<% end %>
-		<li><%= link_to 'All articles', articles_path %></li>
+		<li>
+			<%= link_to articles_path do %>
+				All (<%= Article.all.count %>)
+			<% end %>
+		</li>
 	</ul>
 </div>

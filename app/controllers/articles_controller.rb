@@ -8,8 +8,6 @@ class ArticlesController < ApplicationController
       @articles = Article.find_all_by_category(params[:category])
     end
     
-    puts @articles.inspect
-    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @articles }

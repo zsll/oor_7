@@ -13,8 +13,8 @@
 
 /* Header */
 .navbar-inner {
-	background-image: -moz-linear-gradient(top, #FF7F00, #FE0500) !important;
-	background-image: -webkit-linear-gradient(top, #FF7F00, #FE0500) !important;
+	background-image: -moz-linear-gradient(top, #EF7F00, #EE0500) !important;
+	background-image: -webkit-linear-gradient(top, #EF7F00, #EE0500) !important;
 }
 
 .navbar .brand {
