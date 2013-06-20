@@ -1,0 +1,17 @@
+<%= render 'github_section', :link => "https://github.com/zsll/oor_2"%>
+A ideal place to store the global constant array/hash is under the initializer folder. Please note every time you revise constants, you may have to restart with <code>rails s</code> to reload the changes.
+<% code = "class Constant
+  def self.continents
+    ['Europe', 'Asia', 'Australia', 'North America', 'South America', 'Africa', 'Antarctica']
+  end
+
+  def self.gender
+    {:female => 'guy', :male => 'gal', :else => '*@#\$'}
+  end
+end" %>
+<% cache Digest::SHA1.hexdigest(code) do %>
+	<% code_content = highlight_code(:rb, code).html_safe %>
+	<%= render 'code_section', :title => "/config/initializers/constants.rb", :content => code_content %>
+<% end %>
+
+
