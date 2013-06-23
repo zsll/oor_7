@@ -4,16 +4,25 @@
 	<title>Odyssey On Rails</title>
 	<%= stylesheet_link_tag "application", :media => "all" %>
 	<%= javascript_include_tag "application" %>
+	<%= javascript_include_tag "https://apis.google.com/js/plusone.js" %>
 	<%= csrf_meta_tags %>
 </head>
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=<%=OORConstant.facebook_app_id%>";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <%= render 'layouts/header' %>
 <div class="container">
 	<div class="row-fluid oor-60px-padding-top">
-		<div class="span9">
+		<div class="span9 oor-main">
 			<%= yield %>
 		</div>
-		<div class="span3">
+		<div class="span3 oor-sidebar">
 			<%= render "layouts/ads_sidebar" %>
 			<%= render "layouts/archive_sidebar" %>
 		</div>		

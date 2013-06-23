@@ -1,7 +1,7 @@
 <div class="well">
 	<ul class="nav nav-list">
 		<li class="nav-header">Articles</li>
-		<% Constant.category.each do |c| %>
+		<% OORConstant.category.each do |c| %>
 			<% if Article.find_all_by_category(c).count > 0 %>
 				<li>
 					<%= link_to articles_path(:category => c) do %>

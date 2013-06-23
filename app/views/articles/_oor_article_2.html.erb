@@ -1,17 +1,24 @@
 <%= render 'github_section', :link => "https://github.com/zsll/oor_2"%>
-An ideal place to store global constants is under the initializer folder. Please note every time you revise constants, you may have to restart with <code>rails s</code> to reload the changes.
+An ideal place to store global constants is under the initializer folder.
 <% code = "class Constant
   def self.continents
     ['Europe', 'Asia', 'Australia', 'North America', 'South America', 'Africa', 'Antarctica']
   end
 
   def self.gender
-    {:female => 'guy', :male => 'gal', :else => '*@#\$'}
+    {:female => 'gal', :male => 'guy', :else => '*@#\$'}
   end
 end" %>
 <% cache Digest::SHA1.hexdigest(code) do %>
 	<% code_content = highlight_code(:rb, code).html_safe %>
 	<%= render 'code_section', :title => "/config/initializers/constants.rb", :content => code_content %>
 <% end %>
-
+Then the constants can be used as below.
+<% code = "You are from \<%= select_tag 'continents', options_for_select(Constant.continents) %\>.
+Your are \<%= select 'gender', 'person', Constant.gender %\>." %>
+<% cache Digest::SHA1.hexdigest(code) do %>
+	<% code_content = highlight_code(:erb, code).html_safe %>
+	<%= render 'code_section', :title => "/app/views/miscellaneous/select.html.erb", :content => code_content %>
+<% end %>
+Please note every time you revise the global constants, you may have to restart with <code>rails s</code> to reload the changes.
 

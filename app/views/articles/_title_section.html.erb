@@ -1,3 +1,7 @@
-<h3><%= article.title %></h3>
-<strong><em><%= article.created_at.to_date %> <span class="divider">/</span> By <%= link_to "Yangzi Liu", about_path %> <span class="divider">/</span> Category: <%= link_to articles_path(:category => article.category) do %><%= article.category %><% end %></em></strong>
-<div class="oor-horizontal-divider"></div>
+<div class="oor-article-title-section">
+	<h3><%= article.title %></h3>
+	<strong><em><%= article.created_at.to_date %> <span class="divider">/</span> By <%= link_to "Yangzi Liu", about_path %> <span class="divider">/</span> Category: <%= link_to articles_path(:category => article.category) do %><%= article.category %><% end %></em></strong>
+	<div class="pull-right">
+		<%=render 'layouts/social_section', :title => article.title, :url => request.protocol + request.host_with_port + article_path(article) %>
+	</div>
+</div>
