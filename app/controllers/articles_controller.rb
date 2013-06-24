@@ -3,9 +3,11 @@ class ArticlesController < ApplicationController
   # GET /articles.json
   def index
     if(params[:category] == nil)
-      @articles = Article.all
+      @articles = Article.order('created_at DESC').all
+      @category = 'All' #as long as the content is not a real category
     else
-      @articles = Article.find_all_by_category(params[:category])
+      @articles = Article.order('created_at DESC').find_all_by_category(params[:category])
+      @category = params[:category]
     end
     
     respond_to do |format|

@@ -5,7 +5,7 @@
 			<% if Article.find_all_by_category(c).count > 0 %>
 				<li>
 					<%= link_to articles_path(:category => c) do %>
-						<%= c %> (<%= Article.find_all_by_category(c).count %>)
+						<% if @category == c %><i class="icon-hand-right"></i><% end %> <%= c %> (<%= Article.find_all_by_category(c).count %>)
 					<% end %>
 				</li>
 			<% end %>

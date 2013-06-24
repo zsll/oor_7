@@ -1,3 +1,9 @@
+<% content = code %>
+<% if defined?(lang) %>
+	<% cache Digest::SHA1.hexdigest(code) do %>
+		<% content = highlight_code(lang, code).html_safe %>
+	<% end %>
+<% end %>
 <div class="oor-code-block">
 	<div class="oor-code-header">
 		<%=title%>
@@ -7,4 +13,4 @@
 			<pre><%=content%></pre>
 		</div>
 	</div>
-</div>
+</div>	

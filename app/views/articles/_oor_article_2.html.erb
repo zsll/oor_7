@@ -9,16 +9,10 @@ An ideal place to store global constants is under the initializer folder.
     {:female => 'gal', :male => 'guy', :else => '*@#\$'}
   end
 end" %>
-<% cache Digest::SHA1.hexdigest(code) do %>
-	<% code_content = highlight_code(:rb, code).html_safe %>
-	<%= render 'code_section', :title => "/config/initializers/constants.rb", :content => code_content %>
-<% end %>
+<%= render 'code_section', :title => "/config/initializers/constants.rb", :code => code, :lang => :rb %>
 Then the constants can be used as below.
 <% code = "You are from \<%= select_tag 'continents', options_for_select(Constant.continents) %\>.
 Your are \<%= select 'gender', 'person', Constant.gender %\>." %>
-<% cache Digest::SHA1.hexdigest(code) do %>
-	<% code_content = highlight_code(:erb, code).html_safe %>
-	<%= render 'code_section', :title => "/app/views/miscellaneous/select.html.erb", :content => code_content %>
-<% end %>
+<%= render 'code_section', :title => "/app/views/miscellaneous/select.html.erb", :code => code, :lang => :erb %>
 Please note every time you revise the global constants, you may have to restart with <code>rails s</code> to reload the changes.
 
