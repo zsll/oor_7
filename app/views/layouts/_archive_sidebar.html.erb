@@ -3,7 +3,7 @@
 		<li class="nav-header">Articles</li>
 		<% OORConstant.category.each do |c| %>
 			<% if Article.find_all_by_category(c).count > 0 %>
-				<li>
+				<li class="<%= 'oor-pointed' if @category == c %>">
 					<%= link_to articles_path(:category => c) do %>
 						<% if @category == c %><i class="icon-hand-right"></i><% end %> <%= c %> (<%= Article.find_all_by_category(c).count %>)
 					<% end %>
