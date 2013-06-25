@@ -1,9 +1,6 @@
 <div class="well">
 	<%= render 'title_section', :article => article %>
 	<p>
-		<%= article.description %>
-		<%= link_to article_path(article) do %>
-			Read More <i class="icon-signin"></i>
-		<% end %>
+		<%= render "oor_summary_#{article.id}", :article => article %>
 	</p>
 </div>

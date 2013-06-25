@@ -1,0 +1,11 @@
+By using the <%= link_to "highlight gem", "https://github.com/simplabs/highlight" %> and a bit of css trick, you can have a colorful code section in your rails app page as below. 
+<%= link_to article_path(article) do %>
+	Read More <i class="icon-signin"></i>
+<% end %>
+<% code = "#Believe me this is a class without syntax error
+class Constant
+  def self.gender
+    {:female => 'gal', :male => 'guy', :else => '*@#\$'}
+  end
+end" %>
+<%= render 'code_section', :title => "/path/to/your/class.rb", :code => code, :lang => :rb %>
