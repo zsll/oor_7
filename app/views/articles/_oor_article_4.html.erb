@@ -57,7 +57,7 @@ Finally, we can call the helpers to render the buttons. I put them in a template
 Now you may use this template from anywhere you want to be sharable.
 <% code = "\<%= render 'layouts/social_section', :title =\> \"I don't really like apple\", :url =\> \"http://www.some_site_you_really_want_to_share.com\" %\>" %>
 <%= render 'code_section', :title => "/path/to/your/view.html.erb", :code => code, :lang => :erb %>
-Detailed config options are available from <%= link_to "social-buttons gem", "https://github.com/iffyuva/social-buttons"%>. Wait. Why not use the <code>like_button</code> method for the 'like' button (trouble maker)? For the <code>:href</code> option seems not working. So you can not freely use this helper to point your like to a specific link. It will always like the url of the current page. I have to use the native code provided by Facebook. You may play with my <%= link_to "source code for demo", "https://github.com/zsll/oor_4" %> to confirm this. Remember to replace the facebook app id.
+Detailed config options are available from <%= link_to "social-buttons gem", "https://github.com/iffyuva/social-buttons"%>. Wait. Why not use the <code>like_button</code> method for the 'like' button (trouble maker)? The reason is that the <code>:href</code> option seems not working. So you can not freely use this helper to point your like to a specific link. It will always like the url of the current page. I have to use the native code provided by Facebook. You may play with my <%= link_to "source code for demo", "https://github.com/zsll/oor_4" %> to confirm this. Remember to replace the facebook app id in <code>/app/config/initializers/constants.rb</code>.
 
 <br>
 <br>
