@@ -61,11 +61,16 @@ end" %>
 		<%= highlight_code(:rb, code).html_safe %>
 	<% end %>
 </pre>
-This looks more decent. If we do inspect element, we can see all key words are wrapped by syntax highlight tags like 'nc', 'k', 'ss'. That's how they can be marked by different colors. Well, I personally prefer a dark background to make the code section stand out. Accordingly the css of these tags needs to be overwritten to adapt to this change. Moreover, I want to prepend a header to the code section to show the file path.
+This looks more decent. If we do inspect element, we can see all key words are wrapped by syntax highlighting tags like 'nc', 'k', 'ss'. That's how they can be marked by different colors.
+
+<br>
+<br>
+Finally, some smart guy shouts out: "Why are we wasting our time here? Why not just <%= link_to "embed a gist", "https://gist.github.com/" %>? That looks even better." Well, a valid question. According to me, it's much more convenient to edit your code in your blog page rather than far away up to the cloud, especially when you are coding in a coffee shop with no Wifi. Also, I prefer things to be as customizable as possible. Eg. I want to prepend a header to the code section to show the file path instead of using the footer. So if you are satisfied with <%= link_to "Github gist", "https://gist.github.com/" %>, sorry for your time. For the rest, let's dive into customization.
+
 <br>
 <br>
 Step 3.
-Add the following css to customize the look of the code section. Here I am simply mimicking the style of <%= link_to "Railscast", "https://railscast.com" %>.
+Add the following css to customize the look of the code section. Here I am simply mimicking the style of <%= link_to "Railscast", "https://railscast.com" %> (awkwardly).
 <% code = "
 /* Code section header and blackboard, to mimic RailsCast highlight style */
 .oor-code-block {
