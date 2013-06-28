@@ -3,5 +3,5 @@
 		<div class="fb-like" data-href="<%=url%>" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
 	</div>
 	<div class="span4 google-plus"><%= google_plus_button(size: "medium", href: url, annotation: "bubble") %></div>
-	<div class="span4 twitter-tweet"><%= tweet_button(url: url, text: title, count: "horizontal", via: "bloodofunicorn") %></div>
+	<div class="span4 twitter-tweet"><%= tweet_button(url: url, text: title, count: "horizontal", via: OORConstant.twitter_id ) %></div>
 </div>

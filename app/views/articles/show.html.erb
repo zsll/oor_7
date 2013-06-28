@@ -1,4 +1,6 @@
 <div class="well">
 	<%= render 'title_section', :article => @article %>
-	<%= render "oor_article_#{@article.id}" %>
+	<div class="oor-article-body oor-justify-text-align">
+		<%= render "oor_article_#{@article.id}" %>
+	</div>
 </div>
