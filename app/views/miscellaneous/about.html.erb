@@ -1,10 +1,24 @@
 <div class="well">
 	<div class="row-fluid oor-about">
 		<div class="span4 oor-about-profile">
-	
+			<div class="img-polaroid oor-about-profile-photo" style="width: 176px; height: 216px; padding: 5px">
+				<%= image_tag("https://sphotos-a.xx.fbcdn.net/hphotos-ash4/s720x720/1016840_10201042856665911_556310961_n.jpg", :size => "178x178") %>
+			</div>
 		</div>
 		<div class="span8 oor-about-text oor-justify-text-align">
-Hi, I am Yangzi Liu, a software engineer living in Bay Area. I worked with <%= link_to "Ruby on Rails", "http://rubyonrails.org/" %>, <%= link_to "Java", "http://www.java.com" %>, <%= link_to "PHP", "http://us.php.net/" %>, <%= link_to "C#", "http://en.wikipedia.org/wiki/C_Sharp_(programming_language)"%>, <%= link_to "Objective-C", "http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html"%>, <%= link_to "Spring", "http://www.springsource.org/sts" %>, <%= link_to "Symfony", "http://symfony.com/" %>, <%= link_to "CodeIgniter", "http://ellislab.com/codeigniter" %>, <%= link_to "etc", "http://www.linkedin.com/profile/view?id=63507676" %>. In this blog, I am gonna focus on Rails, one of my favorite. Though many complain it's slow, I think scalability is not inherent in a framework. Will <%= link_to "Node.js", "http://nodejs.org"%> be more responsive than a Rails app integrated with <%= link_to "EventMachine", "https://github.com/eventmachine/eventmachine" %>? Will a PHP/Mysql site outrun a Rails one migrated to <%= link_to "Redis", "http://redis.io/" %>? I don't know. Somehow I know with Rails I can launch something within a week by myself. Beautiful? It will have a <%= link_to "Bootstrap", "http://twitter.github.io/bootstrap/" %>/<%= link_to "Jquery", "http://jquery.com/" %> look. Reliable? It will be guarded by <%= link_to "guard-rspec", "https://github.com/guard/guard-rspec "%>. Here I am gonna share my experience to demonstrate the grace and fast prototyping power of Rails. Welcome and enjoy!
+Hi, I am Yangzi Liu, a software engineer living in Bay Area. I worked with <%= link_to "Ruby on Rails", "http://rubyonrails.org/" %>, <%= link_to "Java", "http://www.java.com" %>, <%= link_to "PHP", "http://us.php.net/" %>, <%= link_to "C#", "http://en.wikipedia.org/wiki/C_Sharp_(programming_language)"%>, <%= link_to "Objective-C", "http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html"%>, <%= link_to "Spring", "http://www.springsource.org/sts" %>, <%= link_to "Symfony", "http://symfony.com/" %>, <%= link_to "CodeIgniter", "http://ellislab.com/codeigniter" %>, <%= link_to "etc", "http://www.linkedin.com/profile/view?id=63507676" %>. This blog will share my experience in Rails to demonstrate its amazing grace and fast prototyping power. Most of my articles will focus on application demos with working source code. Typically they will not answer questions like "Will <%=link_to "Node.js", "http://nodejs.org/" %> be more responsive than a Rails app integrated with <%= link_to "EventMachine", "https://github.com/eventmachine/eventmachine" %>?" or "Will a PHP/Mysql site outrun a Rails one migrated to <%= link_to "Redis", "http://redis.io/" %>?". Somehow they might help to launch a good-looking (beautified by <%= link_to "Bootstrap", "http://twitter.github.io/bootstrap/" %>/<%= link_to "Jquery", "http://jquery.com/" %>) and reliable (guarded by <%= link_to "guard-rspec", "https://github.com/guard/guard-rspec " %>) app within 40h. Welcome and enjoy. 
+			<div class="pull-right">
+				<%= mail_to "asu.tristan@gmail.com", raw("<i class=\"icon-envelope-alt\"></i>") %>
+				<%= link_to "https://www.facebook.com/yangzi.liu.9" do %>
+					<i class="icon-facebook-sign"></i>
+				<% end %>
+				<%= link_to "https://www.linkedin.com/pub/yangzi-liu/19/328/164/" do %>
+					<i class="icon-linkedin-sign"></i>
+				<% end %>
+				<% link_to "http://weibo.com/u/2374716022" do %>
+					<i class="icon-weibo"></i>
+				<% end %>
+			</div>
 		</div>
 	</div>
 </div>
