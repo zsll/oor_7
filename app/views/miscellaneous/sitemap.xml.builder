@@ -16,7 +16,7 @@ xml.urlset :xmlns => 'http://www.sitemaps.org/schemas/sitemap/0.9' do
     xml.url do
       xml.loc request.protocol + request.host_with_port + article_path(a)
       xml.lastmod a.updated_at.iso8601
-      xml.changefreq("weekly")
+      xml.changefreq "weekly"
     end
   end
 end
