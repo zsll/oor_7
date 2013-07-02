@@ -1,3 +1,8 @@
+<%
+meta :title => @article.title,
+     :description => @article.description,
+     :keywords => @article.keywords
+%>
 <div class="well">
 	<%= render 'title_section', :article => @article %>
 	<div class="oor-article-body oor-justify-text-align">

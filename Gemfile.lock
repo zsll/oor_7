@@ -53,6 +53,7 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    metamagic (2.0.5)
     mime-types (1.23)
     multi_json (1.7.7)
     pg (0.15.1)
@@ -112,6 +113,7 @@ PLATFORMS
 DEPENDENCIES
   highlight
   jquery-rails
+  metamagic
   pg
   rails (= 3.2.13)
   social-buttons!
