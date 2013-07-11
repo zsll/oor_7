@@ -4,10 +4,10 @@ class OORConstant
   end
   
   def self.facebook_app_id
-    return '176113489229142'
+    return 'your_face_book_id'
   end
   
   def self.twitter_id
-    return 'bloodofunicorn'
+    return 'your_twitter_id'
   end
 end

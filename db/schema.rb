@@ -22,12 +22,4 @@ ActiveRecord::Schema.define(:version => 20130702022542) do
     t.string   "keywords"
   end
 
-  create_table "posts", :force => true do |t|
-    t.string   "category"
-    t.string   "title"
-    t.string   "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
 end

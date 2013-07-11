@@ -1,4 +1,0 @@
-<p>Nowadays it's a routine to embed the social button array like</p><%=render 'layouts/social_section', :title => article.title, :url => request.protocol + request.host_with_port + request.fullpath %> into your site. When working on a rails app, you can easily achieve this with the help of the <%= link_to "social-buttons gem", "https://github.com/iffyuva/social-buttons"%>.
-<%= link_to article_path(article) do %>
-	Read More <i class="icon-signin"></i>
-<% end %>
